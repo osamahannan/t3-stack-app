@@ -22,7 +22,7 @@ const ProjectTrackingAndReporting: React.FC = () => {
     ],
   };
 
-  const options = {
+  const options: any = {
     scales: {
       x: {
         type: 'category', // Ensure x-axis is configured as category scale
