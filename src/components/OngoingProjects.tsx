@@ -16,11 +16,11 @@ const OngoingProjects: React.FC = () => {
   }, []);
 
   // Function to add a project
-  const addProject = (project: string) => {
-    const updatedProjects = [...ongoingProjects, project];
-    setOngoingProjects(updatedProjects);
-    localStorage.setItem('ongoingProjects', JSON.stringify(updatedProjects));
-  };
+  // const addProject = (project: string) => {
+  //   const updatedProjects = [...ongoingProjects, project];
+  //   setOngoingProjects(updatedProjects);
+  //   localStorage.setItem('ongoingProjects', JSON.stringify(updatedProjects));
+  // };
 
   return (
     <div className="p-4 bg-gray-100 rounded">
