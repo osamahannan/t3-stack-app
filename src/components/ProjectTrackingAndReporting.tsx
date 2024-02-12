@@ -7,6 +7,35 @@ import PDFView from './PDFView';
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 
+interface ChartOptions {
+  // Define the properties of the options object
+  scales?: {
+    x?: {
+      display?: boolean;
+      title?: {
+        display?: boolean;
+        text?: string;
+      };
+    };
+    y?: {
+      display?: boolean;
+      title?: {
+        display?: boolean;
+        text?: string;
+      };
+    };
+  };
+  plugins?: {
+    title?: {
+      display?: boolean;
+      text?: string;
+    };
+    legend?: {
+      display?: boolean;
+    };
+  };
+}
+
 const ProjectTrackingAndReporting: React.FC = () => {
   // Mock data for project tracking visualization
   const projectTrackingData = {
@@ -22,20 +51,30 @@ const ProjectTrackingAndReporting: React.FC = () => {
     ],
   };
 
-  const options: any = {
+  const chartOptions: ChartOptions = {
     scales: {
       x: {
-        type: 'category', // Ensure x-axis is configured as category scale
+        display: true,
         title: {
           display: true,
-          text: 'Month',
+          text: 'Months',
         },
       },
       y: {
+        display: true,
         title: {
           display: true,
           text: 'Tasks Completed',
         },
+      },
+    },
+    plugins: {
+      title: {
+        display: true,
+        text: 'Project Progress',
+      },
+      legend: {
+        display: true,
       },
     },
   };
@@ -48,7 +87,7 @@ const ProjectTrackingAndReporting: React.FC = () => {
       <div className="mb-8">
         {/* <h3 className="text-lg font-semibold mb-2">Project Tracking Visualization</h3> */}
         <div className="bg-white p-4 rounded shadow-md">
-          <Line data={projectTrackingData} options={options} />
+          <Line data={projectTrackingData} options={chartOptions} />
         </div>
       </div>
 

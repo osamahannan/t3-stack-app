@@ -3,16 +3,16 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
-interface Task {
-  id: number;
+export interface Task {
   description: string;
   deadline: string;
   assignedTo: string;
+  priority: string;
 }
 
 const TaskList: React.FC = () => {
   // State to hold tasks
-  const [tasks, setTasks] = useState<any[]>([]);
+  const [tasks, setTasks] = useState<Task[]>([]);
 
   // Effect to load tasks from local storage on component mount
   useEffect(() => {
@@ -23,11 +23,11 @@ const TaskList: React.FC = () => {
   }, []);
 
   // Function to add a task
-  const addTask = (task: any) => {
-    const updatedTasks = [...tasks, task];
-    setTasks(updatedTasks);
-    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
-  };
+  // const addTask = (task: any) => {
+  //   const updatedTasks = [...tasks, task];
+  //   setTasks(updatedTasks);
+  //   localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+  // };
 
   return (
     <div className="container mx-auto p-4">

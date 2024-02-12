@@ -2,10 +2,11 @@
 
 import React, { useState } from 'react';
 import Layout from '~/components/Layout';
+import { Task } from '~/components/TaskList';
 
 const TasksPage: React.FC = () => {
   // State for managing task inputs
-  const [tasks, setTasks] = useState<any[]>([]);
+  const [tasks, setTasks] = useState<Task[]>([]);
   const [taskDescription, setTaskDescription] = useState<string>('');
   const [deadline, setDeadline] = useState<string>('');
   const [priority, setPriority] = useState<string>('');
