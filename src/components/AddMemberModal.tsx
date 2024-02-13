@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { RxCross2 } from "react-icons/rx";
 
 const AddMemberModal: React.FC<{ onClose: () => void; onSave: (member: { name: string; email: string; role: string }) => void }> = ({ onClose, onSave }) => {
   const [name, setName] = useState('');
@@ -26,7 +25,7 @@ const AddMemberModal: React.FC<{ onClose: () => void; onSave: (member: { name: s
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold">Add Team Member</h2>
           <button onClick={onClose}>
-            <FontAwesomeIcon icon={faTimes} className="text-gray-500 hover:text-gray-700" />
+            <RxCross2 className="text-gray-500 hover:text-gray-700" />
           </button>
         </div>
         <div className="mb-4">

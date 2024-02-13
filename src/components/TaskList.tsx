@@ -30,10 +30,10 @@ const TaskList: React.FC = () => {
   // };
 
   return (
-    <div className="container mx-auto p-4">
-      <h2 className="text-2xl font-semibold mb-4">Task List</h2>
-      <div className="overflow-x-auto">
-        <table className="w-full whitespace-nowrap">
+    <div className="container mx-auto">
+      {/* <h2 className="text-2xl font-semibold mb-4">Task List</h2> */}
+      <div className="overflow-x-auto rounded">
+        <table className="w-full whitespace-nowrap rounded">
           <thead>
             <tr className="bg-gray-100">
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Description</th>
@@ -43,14 +43,24 @@ const TaskList: React.FC = () => {
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {tasks.map((task, index) => (
-              <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                <td className="px-6 py-4">{task.description}</td>
-                <td className="px-6 py-4">{task.deadline}</td>
-                <td className="px-6 py-4">{task.priority}</td>
-                <td className="px-6 py-4">{task.assignedTo}</td>
+            {tasks?.length > 0 ? (
+              tasks.map((task, index) => (
+                <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                  <td className="px-6 py-4">{task.description}</td>
+                  <td className="px-6 py-4">{task.deadline}</td>
+                  <td className="px-6 py-4">{task.priority}</td>
+                  <td className="px-6 py-4">{task.assignedTo}</td>
+                </tr>
+              ))
+            ) : (
+              <tr className='bg-gray-200'>
+                <td className="px-6 py-4">No tasks found</td>
+                <td className="px-6 py-4" />
+                <td className="px-6 py-4" />
+                <td className="px-6 py-4" />
               </tr>
-            ))}
+            )}
+
           </tbody>
         </table>
       </div>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AddMemberModal from './AddMemberModal';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { FaRegUser } from "react-icons/fa";
 
 const TeamCollaboration: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -57,7 +56,7 @@ const TeamCollaboration: React.FC = () => {
           <div key={index} className="flex items-start justify-between bg-white p-4 rounded shadow">
             <div className="flex flex-col mb-2 gap-1">
               <div className="flex items-center mb-2">
-                <FontAwesomeIcon icon={faUser} className="text-gray-500 mr-2" />
+                <FaRegUser className="text-gray-500 mr-2" />
                 <span className="font-semibold">{member.name}</span>
               </div>
               <span className="font-semibold">{member.email}</span>
