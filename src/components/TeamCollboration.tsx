@@ -43,14 +43,12 @@ const TeamCollaboration: React.FC = () => {
     <div className="team-collaboration-container p-4 bg-gray-100 rounded my-4">
       <h2 className="text-lg font-semibold mb-4">Team Collaboration</h2>
 
-      {/* Add Team Member */}
       <div className="mb-4">
         <button onClick={toggleModal} className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
           Add Team Member
         </button>
       </div>
 
-      {/* Team Members */}
       <div className="grid grid-cols-1 gap-4">
         {teamMembers.map((member, index) => (
           <div key={index} className="flex items-start justify-between bg-white p-4 rounded shadow">
@@ -67,7 +65,6 @@ const TeamCollaboration: React.FC = () => {
         ))}
       </div>
 
-      {/* Modal */}
       {showModal && <AddMemberModal onClose={toggleModal} onSave={addTeamMember} />}
     </div>
   );

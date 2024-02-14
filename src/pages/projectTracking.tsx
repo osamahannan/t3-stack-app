@@ -1,5 +1,3 @@
-// components/ProjectTracking.tsx
-
 import Layout from '~/components/Layout';
 import React, { useState, useEffect } from 'react';
 import ProjectTrackingAndReporting from '~/components/ProjectTrackingAndReporting';
@@ -42,15 +40,11 @@ const ProjectTracking: React.FC = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  console.log("projects", projects)
-  console.log("formData", formData)
-
   return (
     <Layout>
       <div className="p-4 bg-gray-100 rounded">
         <h2 className="text-lg font-semibold mb-4">Project Tracking</h2>
 
-        {/* Project Form */}
         <form onSubmit={handleSubmit} className="mb-4">
           <div className="flex flex-col md:flex-row md:space-x-4">
             <input
@@ -89,7 +83,6 @@ const ProjectTracking: React.FC = () => {
           </button>
         </form>
 
-        {/* Project List */}
         <div>
           {projects.map(project => (
             <div key={project.id} className="border border-gray-300 rounded-md p-4 mb-4">

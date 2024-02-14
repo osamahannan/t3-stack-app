@@ -1,5 +1,3 @@
-// components/TaskList.tsx
-
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
@@ -22,16 +20,8 @@ const TaskList: React.FC = () => {
     }
   }, []);
 
-  // Function to add a task
-  // const addTask = (task: any) => {
-  //   const updatedTasks = [...tasks, task];
-  //   setTasks(updatedTasks);
-  //   localStorage.setItem('tasks', JSON.stringify(updatedTasks));
-  // };
-
   return (
     <div className="container mx-auto">
-      {/* <h2 className="text-2xl font-semibold mb-4">Task List</h2> */}
       <div className="overflow-x-auto rounded">
         <table className="w-full whitespace-nowrap rounded">
           <thead>
@@ -66,13 +56,6 @@ const TaskList: React.FC = () => {
       </div>
       <Link href="/tasks">
         <button
-          // onClick={() =>
-          //   addTask({
-          //     description: 'New Task',
-          //     deadline: '2024-03-01',
-          //     priority: 'High',
-          //     assignedTo: 'John Doe',
-          //   })}
           className="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md"
         >
           Add Task

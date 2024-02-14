@@ -1,5 +1,3 @@
-// pages/tasks.tsx
-
 import React, { useState } from 'react';
 import Layout from '~/components/Layout';
 import { Task } from '~/components/TaskList';
@@ -44,7 +42,6 @@ const TasksPage: React.FC = () => {
     <Layout>
       <div className="container mx-auto p-4">
         <h1 className="text-3xl font-semibold mb-4">Task Management</h1>
-        {/* Task Form */}
         <form onSubmit={handleSubmit} className="bg-gray-100 p-6 rounded-lg">
           <div className="mb-4">
             <label htmlFor="taskDescription" className="block text-sm font-medium text-gray-700">
@@ -107,7 +104,6 @@ const TasksPage: React.FC = () => {
           </button>
         </form>
 
-        {/* Task List */}
         <div className="mt-8">
           <h2 className="text-xl font-semibold mb-4">Task List</h2>
           <div className="overflow-x-auto">

@@ -1,5 +1,3 @@
-// pages/profile.tsx
-
 import React, { useState, useEffect } from 'react';
 import Layout from '~/components/Layout';
 
@@ -54,7 +52,6 @@ const ProfilePage: React.FC = () => {
       <div className="p-4 bg-gray-100 rounded">
         <h2 className="text-lg font-semibold mb-4">User Profile</h2>
 
-        {/* Profile Settings Form */}
         <form className="mb-4">
           <div className="mb-4">
             <label className="block mb-2">Full Name</label>
@@ -78,24 +75,15 @@ const ProfilePage: React.FC = () => {
           </div>
           <div className="mb-4">
             <label className="block mb-2">Bio</label>
-            {/* <input
-              type="text"
-              name="bio"
-              value={profileData.bio}
-              onChange={handleProfileChange}
-              className="border border-gray-300 rounded-md px-4 py-2 w-full"
-            /> */}
             <textarea
               name="bio"
               value={profileData.bio}
               onChange={handleProfileChange}
-              // placeholder="Project Description"
               rows={3}
               className="border border-gray-300 rounded-md px-4 py-2 resize-none w-full md:w-1/2"
             />
           </div>
 
-          {/* Project Settings */}
           <div>
             <h3 className="text-lg font-semibold mb-2">Project Settings</h3>
             <div className="mb-2">
