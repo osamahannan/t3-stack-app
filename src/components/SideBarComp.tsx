@@ -6,7 +6,7 @@ import { BsListTask } from "react-icons/bs";
 import { ImProfile } from "react-icons/im";
 import { AiOutlineProject } from "react-icons/ai";
 
-interface SideBarProps {
+interface SideBarCompProps {
   show: boolean;
   setter: () => void;
 }
@@ -17,7 +17,7 @@ interface MenuItemProps {
   route: string;
 }
 
-const SideBar: React.FC<SideBarProps> = ({ show, setter }) => {
+const SideBarComp: React.FC<SideBarCompProps> = ({ show, setter }) => {
   const router = useRouter();
 
   // Define our base class
@@ -89,4 +89,4 @@ const SideBar: React.FC<SideBarProps> = ({ show, setter }) => {
   )
 }
 
-export default SideBar
+export default SideBarComp
