@@ -22,7 +22,7 @@ const TaskList: React.FC = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="overflow-x-auto rounded">
+      <div className="overflow-x-auto rounded no-scrollbar">
         <table className="w-full whitespace-nowrap rounded">
           <thead>
             <tr className="bg-gray-100">
