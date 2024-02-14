@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AddMemberModal from './AddMemberModal';
 import { FaRegUser } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 
 const TeamCollaboration: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -60,7 +61,9 @@ const TeamCollaboration: React.FC = () => {
               <span className="font-semibold">{member.email}</span>
               <span className="font-semibold">{member.role}</span>
             </div>
-            <button className="text-red-500 hover:text-red-600" onClick={() => removeTeamMember(index)}>Remove</button>
+            <button className="text-red-500 hover:text-red-600 text-xl" onClick={() => removeTeamMember(index)}>
+              <MdDelete />
+            </button>
           </div>
         ))}
       </div>
