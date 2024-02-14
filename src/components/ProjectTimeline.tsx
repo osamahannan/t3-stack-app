@@ -27,7 +27,7 @@ const ProjectTimeline: React.FC = () => {
           {timelineData.length > 0 ? (
             timelineData.map((task, index) => (
               <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                <td className="px-6 py-4">{task.description}</td>
+                <td className="px-6 py-4">{task.name}</td>
                 <td className="px-6 py-4">{task.timeLine}</td>
               </tr>
             ))
